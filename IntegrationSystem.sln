@@ -31,17 +31,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Presentat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Presentation.InternalServices.UserMerger", "IntegrationSystem.Presentation.InternalServices.UserMerger\IntegrationSystem.Presentation.InternalServices.UserMerger.csproj", "{133F62BD-EE51-4020-95D9-8E7C563C7D7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Infrastructure.Persistence.Repositories", "IntegrationSystem.Infrastructure.Persistence.Repositories\IntegrationSystem.Infrastructure.Persistence.Repositories.csproj", "{91026461-A23E-42F9-A1E3-385AA969D7B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Infrastructure.Persistence.Repositories", "IntegrationSystem.Infrastructure.Persistence.Repositories\IntegrationSystem.Infrastructure.Persistence.Repositories.csproj", "{91026461-A23E-42F9-A1E3-385AA969D7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Infrastructure.Persistence.UnitOfWorks", "IntegrationSystem.Infrastructure.Persistence.UnitOfWorks\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks.csproj", "{297B03DC-3E77-4F0D-B59D-0F1D7E4F003D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Infrastructure.Persistence.UnitOfWorks", "IntegrationSystem.Infrastructure.Persistence.UnitOfWorks\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks.csproj", "{297B03DC-3E77-4F0D-B59D-0F1D7E4F003D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Infrastructure.Persistence.Interfaces", "IntegrationSystem.Infrastructure.Persistence.Interfaces\IntegrationSystem.Infrastructure.Persistence.Interfaces.csproj", "{34E3E765-2F48-49B5-B641-A3BB56BB0D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Infrastructure.Persistence.Interfaces", "IntegrationSystem.Infrastructure.Persistence.Interfaces\IntegrationSystem.Infrastructure.Persistence.Interfaces.csproj", "{34E3E765-2F48-49B5-B641-A3BB56BB0D79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Domain.Entities", "IntegrationSystem.Domain.Entities\IntegrationSystem.Domain.Entities.csproj", "{88956306-0486-4BD0-9BE4-F6FC31B972CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Domain.Entities", "IntegrationSystem.Domain.Entities\IntegrationSystem.Domain.Entities.csproj", "{88956306-0486-4BD0-9BE4-F6FC31B972CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Application.Interfaces", "IntegrationSystem.Application.Interfaces\IntegrationSystem.Application.Interfaces.csproj", "{2C9E7C6A-D638-49BD-96E6-2226920D5075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Application.Interfaces", "IntegrationSystem.Application.Interfaces\IntegrationSystem.Application.Interfaces.csproj", "{2C9E7C6A-D638-49BD-96E6-2226920D5075}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSystem.Application.UseCases", "IntegrationSystem.Application.UseCases\IntegrationSystem.Application.UseCases.csproj", "{A6ACAB6F-33F7-4517-935E-E46C12B0EDEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationSystem.Application.UseCases", "IntegrationSystem.Application.UseCases\IntegrationSystem.Application.UseCases.csproj", "{A6ACAB6F-33F7-4517-935E-E46C12B0EDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
