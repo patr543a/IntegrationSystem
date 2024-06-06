@@ -1,18 +1,39 @@
 using IntegrationSystem.Presentation.InternalServices.AzureGRPC.Services;
+using Microsoft.Identity.Client;
 
+DotNetEnv.Env.Load("./secrets.env");
+
+// Get the environment variables
+var clientId = Environment.GetEnvironmentVariable("CLIENT_ID");
+var clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET");
+var tenant_id = Environment.GetEnvironmentVariable("TENANT_ID");
+
+// Create the confidential client
+var confidentialApp = ConfidentialClientApplicationBuilder
+	.Create(clientId)
+	.WithClientSecret(clientSecret)
+	.WithAuthority(new Uri($@"https://login.microsoftonline.com/{tenant_id}"))
+	.Build();
+
+// Get the token
+var tokenResponse = await confidentialApp.AcquireTokenForClient([".default"])
+	.ExecuteAsync();
+
+// Make gRPC service
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 builder.AddServiceDefaults();
 
-// Add services to the container.
 builder.Services.AddGrpc();
+builder.Services.AddKeyedSingleton("AzureADToken", tokenResponse.AccessToken);
 
+// Build the app
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 app.MapDefaultEndpoints();
 
-// Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
-app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+app.MapGrpcService<AzureService>();
 
 app.Run();

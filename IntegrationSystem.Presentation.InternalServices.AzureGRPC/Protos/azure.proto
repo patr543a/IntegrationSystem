@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "IntegrationSystem.Presentation.InternalServices.AzureGRPC";
+
+package azure;
+
+service AzureAD {
+	rpc LastChanged (LastChangedRequest) returns (LastChangedReply);
+	rpc GetUsers (GetUsersRequest) returns (GetUsersReply);
+}
+
+message LastChangedRequest {}
+
+message LastChangedReply {
+	google.protobuf.Timestamp time = 1;
+	int32 day = 2;
+	int32 month = 3;
+	int32 year = 4;
+}
+
+message GetUsersRequest {}
+
+message GetUsersReply {
+    repeated User users = 1;
+}
+
+message User {
+    string id = 1;
+	string displayName = 2;
+    string givenName = 3;
+    string surname = 4;
+    string userPrincipalName = 5;
+    string jobTitle = 6;
+    string mail = 7;
+    string mobilePhone = 8;
+    string officeLocation = 9;
+    string preferredLanguage = 10;
+}
