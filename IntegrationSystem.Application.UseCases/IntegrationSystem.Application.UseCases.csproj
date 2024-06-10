@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationSystem.Application.Interfaces\IntegrationSystem.Application.Interfaces.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Domain.Entities\IntegrationSystem.Domain.Entities.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks.csproj" />
+  </ItemGroup>
+
 </Project>
