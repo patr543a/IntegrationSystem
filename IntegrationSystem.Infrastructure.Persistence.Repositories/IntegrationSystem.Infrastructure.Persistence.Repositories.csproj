@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Contexts\IntegrationSystem.Infrastructure.Persistence.Contexts.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Interfaces\IntegrationSystem.Infrastructure.Persistence.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
