@@ -11,11 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IntegrationSystem.Application.Interfaces\IntegrationSystem.Application.Interfaces.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Application.UseCases\IntegrationSystem.Application.UseCases.csproj" />
     <ProjectReference Include="..\IntegrationSystem.Aspire\IntegrationSystem.Aspire.ServiceDefaults\IntegrationSystem.Aspire.ServiceDefaults.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\IntegrationSystem.Domain.Entities\IntegrationSystem.Domain.Entities.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Contexts\IntegrationSystem.Infrastructure.Persistence.Contexts.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Interfaces\IntegrationSystem.Infrastructure.Persistence.Interfaces.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Repositories\IntegrationSystem.Infrastructure.Persistence.Repositories.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks.csproj" />
   </ItemGroup>
 
 </Project>
