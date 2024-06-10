@@ -16,6 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IntegrationSystem.Aspire\IntegrationSystem.Aspire.ServiceDefaults\IntegrationSystem.Aspire.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Contexts\IntegrationSystem.Infrastructure.Persistence.Contexts.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Interfaces\IntegrationSystem.Infrastructure.Persistence.Interfaces.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.Repositories\IntegrationSystem.Infrastructure.Persistence.Repositories.csproj" />
+    <ProjectReference Include="..\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks\IntegrationSystem.Infrastructure.Persistence.UnitOfWorks.csproj" />
   </ItemGroup>
 
 </Project>
