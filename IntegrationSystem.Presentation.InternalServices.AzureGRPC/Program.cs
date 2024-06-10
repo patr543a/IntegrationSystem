@@ -1,6 +1,7 @@
 using IntegrationSystem.Presentation.InternalServices.AzureGRPC.Services;
 using Microsoft.Identity.Client;
 
+// Load the environment variables
 DotNetEnv.Env.Load("./secrets.env");
 
 // Get the environment variables
@@ -22,7 +23,7 @@ var tokenResponse = await confidentialApp.AcquireTokenForClient([".default"])
 // Make gRPC service
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 builder.AddServiceDefaults();
 
 builder.Services.AddGrpc();
@@ -31,7 +32,7 @@ builder.Services.AddKeyedSingleton("AzureADToken", tokenResponse.AccessToken);
 // Build the app
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 app.MapDefaultEndpoints();
 
 app.MapGrpcService<AzureService>();
