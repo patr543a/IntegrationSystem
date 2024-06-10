@@ -3,19 +3,19 @@
 namespace IntegrationSystem.Domain.Entities;
 
 /// <summary>
-/// Represents the root object of an Azure AD response.
+/// Represents the root object of an AzureAD response.
 /// </summary>
 public class AzureADRoot
 {
 	/// <summary>
-	/// The collection of Azure AD users.
+	/// The collection of <see cref="AzureADUser"/> users.
 	/// </summary>
 	[JsonPropertyName("value")]
 	public required IEnumerable<AzureADUser> Users { get; set; }
 }
 
 /// <summary>
-/// Represents an Azure AD user.
+/// Represents a user from AzureAD.
 /// </summary>
 public class AzureADUser
 {

@@ -11,20 +11,9 @@ public class XmlUsersRoot
 	/// <summary>
 	/// Object with the users.
 	/// </summary>
-	[XmlElement("persons")]
-	public required XmlUsers Users { get; set; }
-}
-
-/// <summary>
-/// The list of users of the XML file.
-/// </summary>
-public class XmlUsers
-{
-	/// <summary>
-	/// The list of users.
-	/// </summary>
-	[XmlElement("person")]
-	public required IEnumerable<XmlUser> Users { get; set; }
+	[XmlArray("persons")]
+	[XmlArrayItem("person")]
+	public required List<XmlUser> Users { get; set; }
 }
 
 /// <summary>
